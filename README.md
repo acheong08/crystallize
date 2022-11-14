@@ -1,5 +1,5 @@
 # crystallize
-Kyber CLI tool
+Encryption and signing tool using Kyber and Dilithium
 
 # Usage
 ```
