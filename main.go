@@ -114,6 +114,8 @@ func main() {
 			// Write to file
 			script.Echo(out).WriteFile(output)
 			fmt.Println("Wrote to encrypted file")
+		} else {
+			fmt.Println(out)
 		}
 		return nil
 	})
