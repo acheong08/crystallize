@@ -113,7 +113,7 @@ func main() {
 		if output != "" {
 			// Write to file
 			script.Echo(out).WriteFile(output)
-			fmt.Println("Wrote to encrypted file")
+			fmt.Println("Wrote data to file")
 		} else {
 			fmt.Println(out)
 		}
