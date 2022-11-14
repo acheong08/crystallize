@@ -21,11 +21,11 @@ func main() {
 	var pub string = "pub.key"
 	var encryptFlag bool
 	var decryptFlag bool
-	var signFlag bool
-	var verifyFlag bool
+	var signFlag bool = true
+	var verifyFlag bool = false
 	var signature string
-	var dilithiumFlag bool
-	var kyberFlag bool
+	var dilithiumFlag bool = false
+	var kyberFlag bool = true
 
 	/// Generate a keypair
 	generateCmd := cli.NewSubCommand("generate", "Generate a keypair")
