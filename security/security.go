@@ -1,16 +1,22 @@
 package security
 
 import (
-	_ "github.com/acheong08/crystals-go/dilithium"
+	dili "github.com/acheong08/crystals-go/dilithium"
 	kyber "github.com/acheong08/crystals-go/kyber"
 
 	"encoding/base64"
 	"strings"
 )
 
-func Generate() ([]byte, []byte) {
+func GenerateKyber() ([]byte, []byte) {
 	k := kyber.NewKyber1024()
 	pk, sk := k.PKEKeyGen(nil)
+	return pk, sk
+}
+
+func GenerateDili() ([]byte, []byte) {
+	d := dili.NewDilithium5()
+	pk, sk := d.KeyGen(nil)
 	return pk, sk
 }
 
@@ -63,4 +69,14 @@ func encode(data []byte) string {
 func decode(data string) []byte {
 	decoded, _ := base64.StdEncoding.DecodeString(data)
 	return decoded
+}
+
+func Sign(privkey []byte, message []byte) []byte {
+	d := dili.NewDilithium5()
+	return d.Sign(privkey, message)
+}
+
+func Verify(pubkey []byte, message []byte, signature []byte) bool {
+	d := dili.NewDilithium5()
+	return d.Verify(pubkey, []byte(message), signature)
 }
