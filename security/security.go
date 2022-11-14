@@ -49,7 +49,7 @@ func Decrypt(privkey []byte, ciphertext string) string {
 	// Parse the ciphertext
 	var chunks [][]byte
 	for _, chunk := range strings.Split(ciphertext, ",") {
-		if chunk != "" {
+		if chunk != "" && len(decode(chunk)) != 0 {
 			chunks = append(chunks, decode(chunk))
 		}
 	}
