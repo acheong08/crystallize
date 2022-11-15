@@ -1,6 +1,9 @@
 # crystallize
 Encryption and signing tool using Kyber and Dilithium
 
+## Notes
+This is completely pointless. AES (symmetrical encryption) is still quantum resistant. Kyber is meant for transmitting keys across insecure space. However, I am using this to encrypt data in general. The size of files increase exponentially with this method and it is not suitable for data over 1MiB. This should be for extremely sensitive text that you do not want the world to ever see.
+
 # Usage
 ```
 crystallize v0.0.1 - A CLI tool for post quantum cryptography
