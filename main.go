@@ -21,8 +21,8 @@ func main() {
 	var pub string = "pub.key"
 	var encryptFlag bool
 	var decryptFlag bool
-	var signFlag bool = true
-	var verifyFlag bool = false
+	var signFlag bool
+	var verifyFlag bool
 	var signature string
 	var dilithiumFlag bool
 	var kyberFlag bool
