@@ -24,8 +24,8 @@ func main() {
 	var signFlag bool = true
 	var verifyFlag bool = false
 	var signature string
-	var dilithiumFlag bool = false
-	var kyberFlag bool = true
+	var dilithiumFlag bool
+	var kyberFlag bool
 
 	/// Generate a keypair
 	generateCmd := cli.NewSubCommand("generate", "Generate a keypair")
